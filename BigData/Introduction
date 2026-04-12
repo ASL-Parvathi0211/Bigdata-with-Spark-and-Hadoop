@@ -1,0 +1,101 @@
+# What is Bigdata?
+    Bernard Marr, the Analytics, KPI, AI, and BigData guru, defines BigData as the digital trace (or data) that we are generating in this digital era
+    --> Big Data is all the data created from our daily digital activities — like using mobile apps, browsing the internet, making online transactions, using social media, or even data from sensors and devices.
+    --> Every click, search, message, or transaction leaves behind data. When all this data is collected at a massive scale, it becomes Big Data.
+
+# BigData Vs SmallData
+ | Aspect     | BigData                          | SmallData                   |
+ | Volume     | Massive(TBs-PBs)                 | Small(MBs-GBs)              |
+ | Velocity   | High(real time/Streaming)        | Low(batch/manual updates)   |
+ | Variety    | Structured+Unstructured          | Mostly Structured           |
+ | Processing | Distributed(Spark, Hadoop)       | Single System(SQL, Python)  |
+ | Storage    | Cloud/Data Lakes                 | Local DB/Enterprise Systems |
+ | Use Case   | ML, analytics, real-time systems | reporting, dashboards       |
+
+# BigData Life Cycle
+    1. Data Collection
+        Initiated based on a business problem or requirement
+        Data comes from multiple sources (app, logs, APIs, sensors)
+        --> If you don't collect the right data, everything downstream is useless. This step defines data quality, relevance, and business value from dayone.
+![Data Collection](./Data%20Collection.png)
+
+    2. Data Storage (HDFS / Data Lakes)
+        Stored in distributed systems like Hadoop HDFS, S3, etc.
+        --> Big Data can’t fit on a single machine. Distributed storage ensures:
+            Scalability (handle TBs/PBs of data)
+            Fault tolerance (no data loss if a node fails)
+            Cost efficiency (commodity hardware / cloud storage)
+
+    3. Data Processing & Modeling (MapReduce / ETL)
+        Data is cleaned, transformed, and structured
+        Data models define entities, relationships, and rules
+        --> Raw data is messy. This step:
+            Converts data into a usable structure
+            Ensures consistency and integrity
+            Makes data ready for querying and analytics
+        --> Without modeling, you just have a data swamp.
+![Data Modeling](./Data%20Modeling.png)
+
+    4. Data Processing (Apache Spark, etc.)
+        Advanced processing to extract insights
+        Includes aggregations, joins, ML transformations
+        --> This is where data turns into insights:
+            Faster processing with distributed engines like Spark
+            Enables real-time and batch analytics
+            Supports machine learning and advanced analytics
+![Data Processing](./Data%20Processing.png)
+
+    5. Data Visualization
+        Presented as dashboards, charts, reports
+        --> No business user wants raw tables. Visualization:
+            Makes insights easy to understand
+            Helps stakeholders quickly identify trends
+            Bridges the gap between data and decision-makers
+![Data Visualization](./Data%20Visualization.png)
+
+    6. Decision Making & Feedback Loop
+        Insights drive business decisions
+        New requirements generate more data
+        --> This closes the loop:
+            Data becomes actionable value
+            Drives new use cases and improvements
+            Keeps the system evolving (continuous lifecycle)
+
+# Characteristics of BigData
+    1. Volume
+        Refers to massive amounts of data(TBs-->PBs-->beyond)
+        Comes from logs, transactions, social media, IoT, etc.
+        --> Traditional systems cannot scale
+            Requires distributed storage (HDFS, S3)
+
+    2. Velocity
+        Data is generated and processed at high speed
+        Includes real-time/Streaming data
+        --> Needs stream processing systems like kafka, Spark Streaming/Flink
+            Enables real-time decision making
+
+    3. Variety
+        Data comes in multiple formats
+           Structured (tables)
+           Semi-structured (JSON, XML)
+           Unstructured (images, videos, logs)
+           --> Requires flexible schema design (schema-on-read, )
+           Supports diverse data source
+  
+ # Additional Characteristics
+    4. Veracity
+        Veracity is about the accuracy, reliability, and trustworthiness of data. Since data comes from multiple sources, it may contain inconsistencies or errors.
+        --> Poor-quality data leads to incorrect insights, so strong data validation, cleansing, and ETL processes are essential.
+
+    5. Value
+       Value is the ultimate goal of Big Data — turning data into meaningful insights that drive smarter decisions and business outcomes.
+       --> Without value, data is just stored information. The real benefit comes from using it to improve efficiency, innovation, and decision-making.
+
+# Bit, Bytes and Beyond
+    Data is measured starting from the smallest unit called bit, which represents a binary value of 0 or 1
+    Eight bits make one byte, and from there the size increase exponentially into kilobytes, megabytes, gigabytes, and terabytes-the range most everyday systems operate in.
+    BigData goes far beyond this, reaching scales like petabytes, exabytes, zettabytes, and even yottabytes
+    To put that into perspective, a single exabyte can store millions of high-resolution 4k movies, while a zettabyte equals a billion terabytes.
+    This massive growth in data volume makes it impossible to rely on traditional storage and processing systems, which is why distributed architectures and cloud-based solutions are essential for handling BigData efficiently
+![Bits](./Bits.png)
+
