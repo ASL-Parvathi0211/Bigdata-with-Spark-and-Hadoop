@@ -17,7 +17,7 @@
         Initiated based on a business problem or requirement
         Data comes from multiple sources (app, logs, APIs, sensors)
         --> If you don't collect the right data, everything downstream is useless. This step defines data quality, relevance, and business value from dayone.
-![Data Collection](./Data%20Collection.png)
+![Data collection](./Data%20Collection/DataCollection.png)
 
     2. Data Storage (HDFS / Data Lakes)
         Stored in distributed systems like Hadoop HDFS, S3, etc.
